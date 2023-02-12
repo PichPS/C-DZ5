@@ -20,25 +20,32 @@ int[] EnterArr()
     return Rand;
 }
 
-int MIN(int[] Arr)
+// int MIN(int[] Arr)
+// {
+//     int min = 0;
+//     for (int i = 0; i < Arr.Length; i++)
+//     {
+//         if (Arr[i] < min) Arr[i] = min;
+//     }
+//     System.Console.WriteLine(min);
+//     return min;
+// }
+int MAXMIN (int[] Arr)
 {
-    int min = 0;
-    for (int i = 0; i < Arr.Length; i++)
-    {
-        if (Arr[i] < min) Arr[i] = min;
-    }
-    System.Console.WriteLine(min);
-    return min;
-}
-int MAX(int[] Arr)
-{
-    int max = 0;
-    for (int i = 0; i < Arr.Length; i++)
-    {
-        if (Arr[i] > max) Arr[i] = max;
-    }
-    System.Console.WriteLine(max);
-    return max;
-}
+//int[] Arr = {15,3,6,8};
 
-System.Console.WriteLine(MAX(EnterArr())-MIN(EnterArr()));
+    int min = Arr[0];
+    int max = Arr[0];
+    for (int i = 0; i < Arr.Length; i++)
+    {
+        if (Arr[i] < min) min = Arr[i];
+        if (Arr[i] > max) max = Arr[i];
+    }
+    int result = max - min;
+    System.Console.WriteLine(result);
+    return result;
+    
+}
+ 
+MAXMIN(EnterArr());
+
